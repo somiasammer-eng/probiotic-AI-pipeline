@@ -1,0 +1,106 @@
+# probiotic-AI-pipeline
+AI‑driven multi‑scale pipeline for probiotic gene‑module discovery, protein inference, metabolic modeling, and host‑interaction prediction.
+probiotic-ai-framework/
+├── README.md                    # Comprehensive overview and quick start
+├── LICENSE                      # MIT license terms  
+├── CITATION.cff                 # Citation metadata (CFF format)
+├── INSTALL.md                   # Detailed installation guide
+├── requirements.txt             # Python package dependencies
+├── environment.yml              # Conda environment specification
+├── Dockerfile                   # Docker container specification
+├── .github/
+│   ├── workflows/               # CI/CD automation (GitHub Actions)
+│   ├── ISSUE_TEMPLATE.md       # Bug report template
+│   └── CONTRIBUTING.md         # Contribution guidelines
+├── src/
+│   ├── probiotic_discovery/     # Main package
+│   │   ├── annotation/          # Genome annotation pipeline
+│   │   │   ├── prokka_wrapper.py
+│   │   │   ├── rast_integration.py
+│   │   │   └── consensus_annotation.py
+│   │   ├── module_detection/    # Gene module identification
+│   │   │   ├── module_finder.py
+│   │   │   └── cooccurrence_analysis.py
+│   │   ├── protein_analysis/    # PLM-based functional prediction
+│   │   │   ├── esm2_embeddings.py
+│   │   │   ├── prott5_analysis.py
+│   │   │   ├── functional_prediction.py
+│   │   │   └── benchmarking.py
+│   │   ├── metabolic_modeling/  # GEM reconstruction and simulation
+│   │   │   ├── model_builder.py
+│   │   │   ├── matrix_constraints.py
+│   │   │   └── flux_analysis.py
+│   │   ├── ai_clustering/       # Machine learning pipeline
+│   │   │   ├── graph_neural_networks.py
+│   │   │   ├── variational_autoencoders.py
+│   │   │   └── transformer_attention.py
+│   │   ├── prediction/          # Host-interaction prediction
+│   │   │   ├── feature_engineering.py
+│   │   │   ├── ensemble_models.py
+│   │   │   └── strain_ranking.py
+│   │   └── visualization/       # Plotting and reporting
+│   │       ├── figure_generation.py
+│   │       └── interactive_plots.py
+├── workflows/
+│   ├── snakemake/              # Snakemake workflow management
+│   ├── nextflow/               # Nextflow pipeline
+│   └── scripts/                # Individual analysis scripts
+├── tests/
+│   ├── unit_tests/             # Individual function tests
+│   ├── integration_tests/      # End-to-end pipeline tests
+│   └── test_data/              # Small datasets for testing
+├── docs/
+│   ├── installation.md         # Setup instructions
+│   ├── user_guide.md          # Step-by-step usage guide
+│   ├── api_reference.md       # Function documentation
+│   └── tutorials/             # Jupyter notebook tutorials
+├── models/
+│   ├── trained_classifiers/    # Pre-trained ML models
+│   ├── protein_embeddings/     # PLM model weights
+│   └── metabolic_templates/    # GEM templates
+├── data/
+│   ├── example_genomes/        # Sample input files
+│   └── validation_sets/        # Benchmark datasets
+└── examples/
+    ├── quick_start.py          # 15-minute demo analysis
+    ├── full_pipeline.py        # Complete analysis example
+    └── custom_analysis.py      # Customization examples
+Probiotic_AI_Framework_Dataset_v1.0/
+├── genomic_data/
+│   ├── complete_genomes_156.tar.gz      # All 156 genome sequences (FASTA)
+│   ├── gene_annotations.tar.gz          # Prokka, RAST, KEGG annotations
+│   ├── gene_modules_247.xlsx           # Complete gene module catalog
+│   └── phylogenetic_trees.newick       # Species phylogenetic relationships
+├── protein_data/
+│   ├── protein_sequences_8847.fasta    # All analyzed protein sequences
+│   ├── esm2_embeddings.h5              # ESM-2 embeddings (1280-dimensional)
+│   ├── prott5_embeddings.h5            # ProtT5 embeddings (1024-dimensional)
+│   ├── functional_predictions.csv      # PLM-based annotations
+│   └── benchmarking_results.xlsx       # Tool comparison data
+├── metabolic_models/
+│   ├── individual_gems/                # 156 strain-specific GEMs (SBML format)
+│   ├── flux_analysis_results.csv       # All 42,640 simulation outputs
+│   ├── matrix_constraints.json         # Environmental constraint parameters
+│   └── validation_data.xlsx            # Experimental flux benchmarks
+├── machine_learning/
+│   ├── feature_matrices/               # Processed ML input features
+│   ├── trained_models/                 # Serialized ML models
+│   ├── cross_validation_results.csv    # Performance metrics
+│   └── prediction_outputs.csv          # Final strain predictions
+├── ai_analysis/
+│   ├── gnn_embeddings.h5              # Graph neural network outputs
+│   ├── vae_latent_coordinates.csv      # Variational autoencoder results
+│   ├── transformer_attention.h5        # Attention weight matrices
+│   └── cluster_assignments.csv         # Module cluster memberships
+├── validation/
+│   ├── experimental_validation.xlsx    # Lab confirmation data (45 strains)
+│   ├── literature_support.csv          # Citation evidence for predictions
+│   └── benchmark_comparisons.xlsx      # Performance vs other tools
+├── supplementary/
+│   ├── figure_source_data/             # Data for all manuscript figures
+│   ├── additional_analyses/            # Extended computational results
+│   └── strain_characterization/        # Individual strain profiles
+└── metadata/
+    ├── dataset_description.md          # Comprehensive documentation
+    ├── data_dictionary.csv            # Variable definitions and units
+    └── experimental_protocols.pdf      # Validation methodologies
